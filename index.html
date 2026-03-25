@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>三兴寺 - 禅通草木，医渡仁心</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Noto Serif SC for a classic feel -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Noto Serif SC', 'Source Han Serif CN', serif;
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+        }
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .text-shadow-lg {
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+        }
+        /* Bamboo forest background with fixed attachment */
+        .bamboo-bg {
+            background-color: #064e3b;
+            background-image: linear-gradient(rgba(6, 78, 59, 0.92), rgba(6, 78, 59, 0.92)), url('https://images.unsplash.com/photo-1470004910676-03f900574c2b?auto=format&fit=crop&q=80&w=2000');
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        /* Image overlay for better text readability */
+        .img-overlay {
+            background: linear-gradient(to bottom, rgba(6, 78, 59, 0.4), #064e3b);
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 2px;
+            height: 100%;
+            background: rgba(212, 175, 55, 0.2);
+            left: -1px;
+            top: 0;
+        }
+        @media (min-width: 768px) {
+            .timeline-item::after {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body class="bg-[#064e3b] text-stone-100">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 px-6 py-4 flex justify-between items-center bg-transparent">
+        <div class="text-2xl font-bold tracking-widest text-[#d4af37]">三兴寺</div>
+        <div class="hidden md:flex space-x-8 text-sm uppercase tracking-widest">
+            <a href="#hero" class="hover:text-[#d4af37] transition">首页</a>
+            <a href="#history" class="hover:text-[#d4af37] transition">兴替</a>
+            <a href="#culture" class="hover:text-[#d4af37] transition">雅韵</a>
+            <a href="#footer" class="hover:text-[#d4af37] transition">赞颂</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <!--  -->
+            <img src="mentou.png" 
+                 onerror="this.src='https://images.unsplash.com/photo-1590481075326-19304360e281?auto=format&fit=crop&q=80&w=2000'"
+                 alt="三兴寺山门" class="w-full h-full object-cover opacity-70">
+            <div class="absolute inset-0 img-overlay"></div>
+        </div>
+        <div class="relative z-10 text-center px-4 fade-in">
+            <h1 class="text-6xl md:text-8xl font-bold mb-4 tracking-[0.2em] text-[#d4af37] text-shadow-lg">三兴寺</h1>
+            <p class="text-xl md:text-2xl italic tracking-widest opacity-90 max-w-3xl mx-auto text-shadow-lg">
+                “历千劫，禅宗长在；逢盛世，佛法重光。”
+            </p>
+            <div class="mt-12 animate-bounce">
+                <i data-lucide="chevron-down" class="w-8 h-8 mx-auto text-[#d4af37]"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Geography & Intro -->
+    <section id="geography" class="relative h-screen flex items-center justify-center overflow-hidden">
+    <!-- <section id="geography" class="relative py-40 px-6 overflow-hidden"> -->
+        <!-- 独立的背景层 -->
+        <div class="absolute inset-0 z-0">
+            <img src="dilihuanj.png" 
+                 onerror="this.src='https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80&w=2000'"
+                 alt="涪江环抱" class="w-full h-full object-cover opacity-70">
+            <div class="absolute inset-0 img-overlay"></div>     
+            <!-- <div class="absolute inset-0 bg-gradient-to-b from-[#064e3b] via-transparent to-[#064e3b]"></div> -->
+        </div>
+        <!-- 内容层 -->
+        <div class="relative z-10 max-w-5xl mx-auto text-center flex flex-col items-center fade-in">
+            <!-- 合影图片容器：确保居中 -->
+            <div class="mb-12 w-full flex justify-center">
+                <img src="heying.jpg" 
+                     onerror="this.src='https://images.unsplash.com/photo-1508804185872-d7badad00f7d?auto=format&fit=crop&q=80&w=800'"
+                     alt="众僧与信众合影" class="rounded-lg w-full max-w-2xl object-cover border-4 border-[#d4af37]/30 shadow-2xl">
+            </div>
+
+            <!-- 文字内容 -->
+            <div class="w-full">
+                <h2 class="text-4xl font-bold mb-12 text-[#d4af37] text-shadow-lg">地理背书</h2>
+                <div class="bg-black/30 backdrop-blur-sm p-8 md:p-12 rounded-2xl border border-[#d4af37]/20">
+                    <p class="text-lg md:text-xl leading-loose text-stone-200 tracking-wide">
+                        汤汤涪水之畔，紫气萦回；亘亘盘龙之侧，佛光普照。<br>
+                        巍巍乎其间者，终南山也。毗灵鹫，近凤岭。襟天福之墟，以眺涪水如练；通康家之浦，而俯北坪似棋。众山点黛，万篁浮烟。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section id="geography" class="relative py-40 px-6 overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            
+            <img src="dilihuanj.png" 
+                 onerror="this.src='https://images.unsplash.com/photo-1590481075326-19304360e281?auto=format&fit=crop&q=80&w=2000'"
+                 alt="涪江环抱" class="w-full h-full object-cover opacity-70">
+            <div class="absolute inset-0 img-overlay"></div>
+        </div>
+        <div class="fade-in">
+            <div class="mb-12 inline-block">
+                
+                <img src="heying.jpg" 
+                     onerror="this.src='https://images.unsplash.com/photo-1508804185872-d7badad00f7d?auto=format&fit=crop&q=80&w=800'"
+                     alt="众僧与信众合影" class="rounded-lg w-full max-w-2xl object-cover border-4 border-[#d4af37]/30 shadow-2xl mx-auto">
+            </div>
+            <h2 class="text-3xl font-bold mb-8 text-[#d4af37]">地理背书</h2>
+            <p class="text-lg leading-relaxed text-stone-300 max-w-3xl mx-auto">
+                汤汤涪水之畔，紫气萦回；亘亘盘龙之侧，佛光普照。<br>
+                巍巍乎其间者，终南山也。毗灵鹫，近凤岭。襟天福之墟，以眺涪水如练；通康家之浦，而俯北坪似棋。众山点黛，万篁浮烟。
+            </p>
+        </div>
+    </section> -->
+
+    <!-- History Timeline -->
+    <section id="history" class="py-24 bg-stone-900/40 relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            <h2 class="text-4xl font-bold text-center mb-16 text-[#d4af37] fade-in">千载兴替</h2>
+            <div class="space-y-12 ml-4 md:ml-0 md:flex md:space-y-0 md:justify-between relative">
+                <div class="relative pl-8 md:pl-0 md:text-center md:w-1/4 fade-in timeline-item">
+                    <div class="absolute -left-[9px] top-0 md:left-1/2 md:-ml-2 w-4 h-4 bg-[#d4af37] rounded-full z-10"></div>
+                    <h3 class="font-bold text-[#d4af37] mb-2 pt-0 md:pt-8">南北朝 / 唐</h3>
+                    <p class="text-sm text-stone-400 px-2">基肇南北，源溯李唐。原名巴兴。</p>
+                </div>
+                <div class="relative pl-8 md:pl-0 md:text-center md:w-1/4 fade-in timeline-item">
+                    <div class="absolute -left-[9px] top-0 md:left-1/2 md:-ml-2 w-4 h-4 bg-[#d4af37] rounded-full z-10"></div>
+                    <h3 class="font-bold text-[#d4af37] mb-2 pt-0 md:pt-8">明末</h3>
+                    <p class="text-sm text-stone-400 px-2">历明末兵焚而衰。</p>
+                </div>
+                <div class="relative pl-8 md:pl-0 md:text-center md:w-1/4 fade-in timeline-item">
+                    <div class="absolute -left-[9px] top-0 md:left-1/2 md:-ml-2 w-4 h-4 bg-[#d4af37] rounded-full z-10"></div>
+                    <h3 class="font-bold text-[#d4af37] mb-2 pt-0 md:pt-8">清初</h3>
+                    <p class="text-sm text-stone-400 px-2">经营缮而复，三仙曾栖此修行。</p>
+                </div>
+                <div class="relative pl-8 md:pl-0 md:text-center md:w-1/4 fade-in timeline-item">
+                    <div class="absolute -left-[9px] top-0 md:left-1/2 md:-ml-2 w-4 h-4 bg-[#d4af37] rounded-full z-10"></div>
+                    <h3 class="font-bold text-[#d4af37] mb-2 pt-0 md:pt-8">当代</h3>
+                    <p class="text-sm text-stone-400 px-2">觉心大师重建，更名“三兴”。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cultural Features -->
+    <section id="culture" class="py-24 px-6 bamboo-bg relative">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-16 text-[#d4af37] fade-in">禅风雅韵</h2>
+            <div class="grid md:grid-cols-3 gap-12">
+                <!-- Feature 1 -->
+                <div class="bg-stone-900/70 overflow-hidden rounded-xl border border-[#d4af37]/20 backdrop-blur-md fade-in hover:border-[#d4af37]/50 transition duration-500">
+                    <div class="h-48 overflow-hidden">
+                        <!--  -->
+                        <img src="chancha.png" 
+                             onerror="this.src='https://images.unsplash.com/photo-1544787210-28272d3d9403?auto=format&fit=crop&q=80&w=800'"
+                             alt="茗寮禅园" class="w-full h-full object-cover hover:scale-110 transition duration-700">
+                    </div>
+                    <div class="p-8">
+                        <div class="mb-4 flex items-center justify-between">
+                            <h3 class="text-xl font-bold text-[#d4af37]">茗寮禅园</h3>
+                            <i data-lucide="coffee" class="w-6 h-6 text-[#d4af37]"></i>
+                        </div>
+                        <p class="text-stone-300 text-sm leading-relaxed">
+                            石案净以无埃，竹帘清而有影。品茗而远世虑；拂尘以明禅心。
+                        </p>
+                    </div>
+                </div>
+                <!-- Feature 2 -->
+                <div class="bg-stone-900/70 overflow-hidden rounded-xl border border-[#d4af37]/20 backdrop-blur-md fade-in hover:border-[#d4af37]/50 transition duration-500" style="transition-delay: 100ms;">
+                    <div class="h-48 overflow-hidden">
+                        <!--  -->
+                        <img src="renwen.png" 
+                             onerror="this.src='https://images.unsplash.com/photo-1610991924373-10022416f40c?auto=format&fit=crop&q=80&w=800'"
+                             alt="寺内人文" class="w-full h-full object-cover hover:scale-110 transition duration-700">
+                    </div>
+                    <div class="p-8">
+                        <div class="mb-4 flex items-center justify-between">
+                            <h3 class="text-xl font-bold text-[#d4af37]">古寺人文</h3>
+                            <i data-lucide="users" class="w-6 h-6 text-[#d4af37]"></i>
+                        </div>
+                        <p class="text-stone-300 text-sm leading-relaxed">
+                            碑碣铭镌，兴废分明竹帛。晨钟施法雨，暮鼓献祥云，滋凡尘以康泰。
+                        </p>
+                    </div>
+                </div>
+                <!-- Feature 3 -->
+                <div class="bg-stone-900/70 overflow-hidden rounded-xl border border-[#d4af37]/20 backdrop-blur-md fade-in hover:border-[#d4af37]/50 transition duration-500" style="transition-delay: 200ms;">
+                    <div class="h-48 overflow-hidden">
+                        <!--  -->
+                        <img src="54aa4deddb011f8bcea6520c84ea1584.mp4_snapshot_00.43_[2026.03.26_00.20.12].jpg" 
+                             onerror="this.src='https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&q=80&w=800'"
+                             alt="岐黄草药" class="w-full h-full object-cover hover:scale-110 transition duration-700">
+                    </div>
+                    <div class="p-8">
+                        <div class="mb-4 flex items-center justify-between">
+                            <h3 class="text-xl font-bold text-[#d4af37]">岐黄医渡</h3>
+                            <i data-lucide="heart-pulse" class="w-6 h-6 text-[#d4af37]"></i>
+                        </div>
+                        <p class="text-stone-300 text-sm leading-relaxed">
+                            觉心大师笃研岐黄，觅灵草于雾谷，起沉疴于穷乡。禅通草木，医渡仁心。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Praise -->
+    <footer id="footer" class="py-24 bg-stone-950 text-center px-6 border-t border-[#d4af37]/10">
+        <div class="max-w-3xl mx-auto fade-in">
+            <!-- [Small decorative image] -->
+            <img src="gaoshi.jpeg" 
+                 onerror="this.src='https://images.unsplash.com/photo-1542323330-01050772271d?auto=format&fit=crop&q=80&w=400'"
+                 alt="禅意静物" class="w-32 h-32 rounded-full mx-auto mb-8 border-2 border-[#d4af37]/20 object-cover">
+            
+            <div class="mb-8 flex justify-center space-x-4">
+                <span class="w-12 h-[1px] bg-[#d4af37]/40 self-center"></span>
+                <span class="text-[#d4af37] tracking-[0.6em] font-bold text-lg">赞曰</span>
+                <span class="w-12 h-[1px] bg-[#d4af37]/40 self-center"></span>
+            </div>
+            <p class="text-xl md:text-2xl text-stone-300 leading-loose mb-12 tracking-[0.15em]">
+                终南灵岫，涪水瑶津。寺立天地，名标古今。<br>
+                禅通草木，医渡仁心。日月升沉，永照福田之境；<br>
+                山河表里，长流功德之音。
+            </p>
+            <div class="mb-8 opacity-40 hover:opacity-100 transition duration-300">
+                <i data-lucide="sun" class="w-6 h-6 mx-auto text-[#d4af37]"></i>
+            </div>
+            <p class="text-xs text-stone-600 uppercase tracking-widest">
+                &copy; 2026 三兴寺 · 禅林胜迹 · 觉心大师主持重建
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-stone-950/90', 'backdrop-blur-md', 'py-2', 'shadow-2xl', 'border-b', 'border-[#d4af37]/10');
+                nav.classList.remove('py-4');
+            } else {
+                nav.classList.remove('bg-stone-950/90', 'backdrop-blur-md', 'py-2', 'shadow-2xl', 'border-b', 'border-[#d4af37]/10');
+                nav.classList.add('py-4');
+            }
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
